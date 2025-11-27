@@ -2,139 +2,146 @@ import { Experience, Project, Skill, Education } from './types';
 
 export const SOCIAL_LINKS = {
   email: "abogeerick@gmail.com",
-  phone: "0790 564 507",
+  phone: "+254 790 564 507",
   linkedin: "https://www.linkedin.com/in/erick-aboge-3a09572a6/",
   github: "https://github.com/Abogeerick",
-  portfolio: "https://abogeerick.netlify.app/"
+  portfolio: "https://yourportfolio.com/" // Updated placeholder as user didn't provide a new domain
 };
 
 export const SKILLS: Skill[] = [
   {
     category: "Frontend",
-    items: ["React.js", "TypeScript", "Next.js", "Vue.js", "Redux", "HTML5", "CSS3", "Tailwind CSS"]
+    items: ["React.js", "Next.js", "TypeScript", "TailwindCSS", "Redux", "Zustand", "HTML5", "CSS3", "Framer Motion"]
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express.js", "Django", "RESTful APIs", "WebSockets"]
+    items: ["Node.js", "Express", "Django", "Python", "C# (.NET Core 8.0)", "RESTful APIs", "Swagger"]
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL", "MySQL"]
+    items: ["PostgreSQL", "MySQL", "MS SQL Server", "Redis", "Supabase", "EF Core", "Prisma ORM"]
   },
   {
     category: "DevOps & Tools",
-    items: ["Docker", "Git", "GitHub", "CI/CD", "Coolify", "Postman", "Swagger", "Agile/Scrum"]
+    items: ["Docker", "Coolify", "Vercel", "Render", "Git", "GitHub Actions", "Postman", "Linux"]
+  },
+  {
+    category: "Architecture",
+    items: ["DDD", "Clean Architecture", "RBAC", "JWT Auth", "Microservices"]
   }
 ];
 
 export const EXPERIENCE: Experience[] = [
   {
     id: "exp-1",
-    role: "Full-Stack Software Developer",
+    role: "Full Stack Software Engineer",
     company: "Optiven Limited",
-    location: "Nairobi, KE",
-    period: "Dec 2024 – Present",
+    location: "Nairobi, Kenya",
+    period: "December 2024 – Present",
     highlights: [
-      "Engineered the end-to-end Performance Appraisal module for the company's HRMS using React, TypeScript, and Django, enabling status tracking and automated email notifications.",
-      "Developed the core customer management module for an in-house CRM, implementing server-side pagination to efficiently handle over 10,000 customer records without performance degradation.",
-      "Integrated a secure authentication system using JWT with refresh token rotation, safeguarding sensitive employee and customer data across HRMS and CRM applications.",
-      "Built dynamic dashboards with data visualizations (charts, graphs) to provide HR and management with real-time insights into employee performance and compliance."
+      "Enterprise CRM Architecture: Engineered a high-performance in-house CRM using Django and React, managing 10,000+ customer records. Implemented indexing and server-side pagination to reduce query time by 40%.",
+      "HRMS Development: Built the Employee Self-Service (ESS) and HR Appraisal modules, replacing legacy systems with a streamlined React/Django solution for PIP and probation workflows.",
+      "Dynamics Integration: Developed C# .NET APIs to extract financial data from Microsoft Dynamics 365 and inject it into executive dashboards for real-time reporting.",
+      "DevOps: Containerized applications using Docker and Coolify to ensure consistent deployment environments."
     ],
-    techStack: ["React", "TypeScript", "Django", "PostgreSQL", "JWT"]
+    techStack: ["React", "Django", ".NET", "PostgreSQL", "Docker"]
   },
   {
     id: "exp-2",
-    role: "Lead Software Developer (Contract)",
+    role: "Contract Software Developer",
     company: "Optiven Limited",
-    location: "Nairobi, KE",
-    period: "Aug 2024 – Dec 2024",
+    location: "Nairobi, Kenya",
+    period: "August 2024 – December 2024",
     highlights: [
-      "Architected and developed a real-time HR compliance tool using React, TypeScript, and Node.js, which digitized employee activity logging and improved operational efficiency by 25%.",
-      "Implemented a supervisor dashboard with a one-click email notification system (Nodemailer, Zoho) that reduced administrative follow-up time by 40%.",
-      "Developed a compliance calculation engine that processed logged hours against required hours, providing clear performance metrics for both employees and management."
+      "Daily Work Diary System: Designed and deployed a compliance monitoring system using Node.js, Express, and React, eliminating manual Friday Excel reports for the entire workforce.",
+      "Feature Implementation: Built Role-Based Access Control (RBAC) for Employee, Supervisor, and HR dashboards, including automated email notifications for non-compliance.",
+      "Fintech Integration: Led the integration of M-Pesa STK Push (Daraja API) for Optiven Water, automating payment reconciliation and reducing manual entry errors by over 90%."
     ],
-    techStack: ["React", "Node.js", "Nodemailer", "TypeScript"]
+    techStack: ["React", "Node.js", "Express", "MySQL"]
   },
   {
     id: "exp-3",
-    role: "Front-end Software Developer (Contract)",
-    company: "GMC Kitengela",
-    location: "Nairobi, KE",
-    period: "March 2024 – Aug 2024",
+    role: "Software Developer (Contract)",
+    company: "GMC KITENGELA",
+    location: "Kajiado, Kenya",
+    period: "January 2024 – August 2024",
     highlights: [
-      "Designed and built a complete procurement management system from the ground up using React, TypeScript, and Node.js.",
-      "The system automated the entire procurement lifecycle—from supplier management to reporting—significantly reducing manual processing errors and improving data integrity."
+      "POS System Development: Engineered an end-to-end Procurement Module for a custom Point of Sale system using React and Django.",
+      "Workflow Automation: Digitized complex supply chain workflows: Store Requisition → RFQ → Bid Analysis → Purchase Order → GRN → Invoice generation.",
+      "Impact: Streamlined the procurement process, reducing approval turnaround time and improving inventory accuracy."
     ],
-    techStack: ["React", "TypeScript", "Node.js"]
+    techStack: ["React", "Django"]
   },
   {
     id: "exp-4",
-    role: "Freelance Software Developer",
-    company: "Remote",
+    role: "Junior Software Developer",
+    company: "FREELANCE (UPWORK)",
     location: "Remote",
-    period: "Nov 2022 – Aug 2023",
+    period: "November 2022 – January 2024",
     highlights: [
-      "Developed user-friendly e-commerce platforms using React.js, integrating secure payment gateways and building reusable component libraries with Tailwind CSS.",
-      "Engineered a Command-Line Interface for inventory management, incorporating functionalities such as adding, viewing, and deleting products, categories, and suppliers.",
-      "Created a React-based news aggregation application to centralize news updates from various categories, significantly enhancing user experience and accessibility."
+      "Developed finance gateway apps using .NET for backend.",
+      "Built ecommerce websites and news websites."
     ],
-    techStack: ["React", "Tailwind CSS", "CLI", "API Integration"]
+    techStack: [".NET", "React"]
   }
 ];
 
 export const PROJECTS: Project[] = [
   {
     id: "proj-1",
-    title: "HRMS Performance Appraisal",
+    title: "SentinelPay",
     category: "Professional",
-    description: "End-to-end performance tracking module with automated notifications.",
-    longDescription: "A critical module for Optiven Limited's HRMS. It replaced manual paper trails with a digital workflow, allowing status tracking, automated email triggers via Nodemailer, and secure data handling using Django backend.",
-    techStack: ["React", "Django", "TypeScript", "PostgreSQL"],
-    imagePlaceholder: "https://picsum.photos/800/600?random=1"
+    description: "Real-Time Fraud Detection & Payments Gateway.",
+    longDescription: "A production-ready full-stack fintech application featuring real-time fraud detection, risk scoring, and a complete payment gateway simulation. Built with Clean Architecture, Domain-Driven Design (DDD), and modern web technologies. Features include JWT-based authentication, multi-currency wallet support, and AI-powered risk explanations.",
+    techStack: ["C# .NET 8", "React", "TypeScript", "PostgreSQL", "Docker", "Redis"],
+    link: "https://sentinel-pay.vercel.app/",
+    github: "https://github.com/Abogeerick/SentinelPay",
+    imagePlaceholder: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "proj-2",
-    title: "E-Commerce Platform",
-    category: "Freelance",
-    description: "User-friendly shopping platform with secure payments.",
-    longDescription: "A custom-built e-commerce solution focusing on speed and reusable component architecture. Features secure payment gateway integration and a fully responsive design.",
-    techStack: ["React", "Tailwind CSS", "Stripe API"],
-    link: "https://traded.netlify.app/",
-    imagePlaceholder: "https://picsum.photos/800/600?random=2"
+    title: "Nexus Financial",
+    category: "Professional",
+    description: "AI-Powered Financial Management Platform.",
+    longDescription: "A comprehensive, production-ready SaaS platform for financial portfolio management with AI-powered transaction categorization, multi-currency support, and real-time analytics. Features include M-PESA transaction management, AI-powered categorization, and multi-asset tracking.",
+    techStack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "M-Pesa API"],
+    link: "https://nexus-app-plum.vercel.app/",
+    github: "https://github.com/Abogeerick/nexus-app",
+    imagePlaceholder: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "proj-3",
-    title: "News Aggregator",
-    category: "Freelance",
-    description: "Centralized news updates from various categories.",
-    longDescription: "A React-based application that consumes external news APIs to provide a unified feed of global news, filtered by category and region.",
-    techStack: ["React", "REST API", "CSS3"],
-    link: "https://eugenemrg.github.io/News-Sources/",
-    imagePlaceholder: "https://picsum.photos/800/600?random=3"
+    title: "Ask the Web",
+    category: "Personal",
+    description: "Streamlit application leveraging LLMs and DuckDuckGo search.",
+    longDescription: "A Streamlit application that answers questions using web search results and provides citations. Features web search using DuckDuckGo, text extraction from web pages, and AI-powered answers.",
+    techStack: ["Python", "Streamlit", "LangChain", "OpenAI", "Docker"],
+    github: "https://github.com/Abogeerick/Ask-the-web",
+    imagePlaceholder: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "proj-4",
-    title: "Inventory CLI",
+    title: "Inventory Management CLI",
     category: "Personal",
-    description: "Command-Line Interface for inventory management.",
-    longDescription: "A robust CLI tool for managing inventory stock, suppliers, and categories. Demonstrates core programming logic and data structure manipulation without a GUI.",
-    techStack: ["Python", "CLI", "SQLite"],
+    description: "Interactive CLI for managing inventory systems.",
+    longDescription: "An interactive Command-Line Interface (CLI) application for managing an inventory system. Supports CRUD operations for products, categories, suppliers, and transactions using SQLite.",
+    techStack: ["Python", "SQLite"],
     github: "https://github.com/Abogeerick/CLI_project",
-    imagePlaceholder: "https://picsum.photos/800/600?random=4"
+    imagePlaceholder: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&q=80&w=800"
   }
 ];
 
 export const EDUCATION: Education[] = [
   {
     school: "University of Nairobi",
-    degree: "Bachelor of Commerce, IT Specialization",
-    period: "Sep 2020 – Dec 2024",
-    details: "Relevant Coursework: Data Structures & Algorithms, OOP, Database Management Systems, Business Intelligence."
+    degree: "Bachelor of Commerce (Information Technology Specialization)",
+    period: "Sept 2020 – Dec 2024",
+    details: "Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Computer Organization & Programming, Database Management Systems, Business Intelligence, Systems Analysis and Design, Management Information Systems, Statistics & Applications"
   },
   {
     school: "Moringa School",
-    degree: "Certificate in Full-Stack Software Development",
-    period: "May 2023 – Nov 2023",
-    details: "Gained proficiency in end-to-end application development, including frontend and backend programming."
+    degree: "Certificate in Software Development",
+    period: "May 2022 – Nov 2022",
+    details: "Key Skills Acquired: Proficiency in full-stack development, covering both front-end and back-end programming, database management, and application deployment."
   }
 ];

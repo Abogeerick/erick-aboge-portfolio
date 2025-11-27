@@ -30,8 +30,8 @@ const Navbar = () => {
   const navLinks = [
     { name: 'About', href: '#hero' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Work', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -121,8 +121,8 @@ const Hero = () => {
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-lg leading-relaxed">
-            Results-driven Full Stack Developer with over 4 years of experience engineering secure, scalable web applications with React, Node.js, and Django.
+          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl leading-relaxed">
+            Results-driven Full Stack Software Engineer with over 3 years of intensive experience architecting scalable web applications and enterprise solutions. Expert in bridging the gap between complex backend logic and responsive frontend interfaces using React, TypeScript, Node.js, Django, and .NET. Proven track record of optimizing business processes—from digitizing HR workflows to integrating high-volume financial gateways. Adept at Clean Architecture, Domain-Driven Design (DDD), and DevOps practices.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-8">
@@ -168,7 +168,7 @@ const Hero = () => {
                 <div className="pl-6 text-slate-300">
                   <div className="flex"><span className="text-red-300 mr-2">name:</span> <span className="text-green-300">'Erick Aboge'</span>,</div>
                   <div className="flex"><span className="text-red-300 mr-2">role:</span> <span className="text-green-300">'Full Stack Engineer'</span>,</div>
-                  <div className="flex"><span className="text-red-300 mr-2">skills:</span> <span className="text-blue-300">['React', 'Node', 'Django']</span>,</div>
+                  <div className="flex"><span className="text-red-300 mr-2">skills:</span> <span className="text-blue-300">['React', 'Node', 'Django', '.NET']</span>,</div>
                   <div className="flex"><span className="text-red-300 mr-2">hardWorker:</span> <span className="text-amber-300">true</span></div>
                 </div>
                 <div className="text-blue-400">{`};`}</div>
@@ -316,7 +316,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <MetricCard 
               label="Experience" 
-              value="4+ Years" 
+              value="3+ Years" 
               icon={<Terminal className="w-6 h-6" />} 
               description="Full Stack Engineering"
             />
@@ -371,47 +371,6 @@ export default function App() {
           </div>
         </Section>
 
-        {/* Experience Section */}
-        <Section id="experience" title="Professional Journey" subtitle="Delivering impactful solutions across various industries." className="bg-white/50 dark:bg-black/20">
-          <div className="relative border-l-2 border-slate-200 dark:border-slate-700 ml-3 md:ml-6 space-y-12">
-            {EXPERIENCE.map((exp) => (
-              <div key={exp.id} className="relative pl-8 md:pl-12 group">
-                {/* Timeline Dot */}
-                <div className="absolute top-2 left-[-9px] w-4 h-4 rounded-full bg-white dark:bg-slate-900 border-4 border-teal-500 group-hover:scale-125 transition-transform" />
-                
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">{exp.role}</h3>
-                    <div className="text-teal-700 dark:text-teal-400 font-medium">{exp.company}</div>
-                  </div>
-                  <div className="text-sm font-mono text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">
-                    {exp.period}
-                  </div>
-                </div>
-
-                <ul className="space-y-3 mb-6">
-                  {exp.highlights.map((point, i) => (
-                    <li key={i} className="flex items-start text-slate-600 dark:text-slate-300 leading-relaxed">
-                      <span className="mr-3 mt-2 w-1.5 h-1.5 bg-amber-400 rounded-full flex-shrink-0" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-
-                {exp.techStack && (
-                  <div className="flex flex-wrap gap-2">
-                    {exp.techStack.map(tech => (
-                      <span key={tech} className="text-xs font-semibold px-2 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </Section>
-
         {/* Projects Section */}
         <Section id="projects" title="Featured Work" subtitle="A selection of professional and freelance projects." className="">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -450,6 +409,47 @@ export default function App() {
                     )}
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        {/* Experience Section */}
+        <Section id="experience" title="Professional Journey" subtitle="Delivering impactful solutions across various industries." className="bg-white/50 dark:bg-black/20">
+          <div className="relative border-l-2 border-slate-200 dark:border-slate-700 ml-3 md:ml-6 space-y-12">
+            {EXPERIENCE.map((exp) => (
+              <div key={exp.id} className="relative pl-8 md:pl-12 group">
+                {/* Timeline Dot */}
+                <div className="absolute top-2 left-[-9px] w-4 h-4 rounded-full bg-white dark:bg-slate-900 border-4 border-teal-500 group-hover:scale-125 transition-transform" />
+                
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">{exp.role}</h3>
+                    <div className="text-teal-700 dark:text-teal-400 font-medium">{exp.company}</div>
+                  </div>
+                  <div className="text-sm font-mono text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">
+                    {exp.period}
+                  </div>
+                </div>
+
+                <ul className="space-y-3 mb-6">
+                  {exp.highlights.map((point, i) => (
+                    <li key={i} className="flex items-start text-slate-600 dark:text-slate-300 leading-relaxed">
+                      <span className="mr-3 mt-2 w-1.5 h-1.5 bg-amber-400 rounded-full flex-shrink-0" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
+                {exp.techStack && (
+                  <div className="flex flex-wrap gap-2">
+                    {exp.techStack.map(tech => (
+                      <span key={tech} className="text-xs font-semibold px-2 py-1 rounded bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
