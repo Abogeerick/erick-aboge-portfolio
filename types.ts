@@ -16,6 +16,7 @@ export interface Project {
   techStack: string[];
   link?: string;
   github?: string;
+  swaggerLink?: string;
   category: 'Professional' | 'Freelance' | 'Personal';
   imagePlaceholder: string;
 }

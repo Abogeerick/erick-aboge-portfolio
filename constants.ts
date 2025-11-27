@@ -96,7 +96,18 @@ export const PROJECTS: Project[] = [
     techStack: ["C# .NET 8", "React", "TypeScript", "PostgreSQL", "Docker", "Redis"],
     link: "https://sentinel-pay.vercel.app/",
     github: "https://github.com/Abogeerick/SentinelPay",
-    imagePlaceholder: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=800"
+    imagePlaceholder: "/WhatsApp Image 2025-11-27 at 09.48.08 (1).jpeg"
+  },
+  {
+    id: "proj-1b",
+    title: "SentinelPay API Documentation",
+    category: "Professional",
+    description: "Comprehensive RESTful API documentation with Swagger UI.",
+    longDescription: "Interactive API documentation for SentinelPay backend built with .NET 8. Features comprehensive endpoint documentation for Authentication, Admin operations, Transactions, and Fraud Detection. Includes JWT-based authorization, request/response schemas, and live API testing capabilities through Swagger UI.",
+    techStack: ["C# .NET 8", "Swagger", "OpenAPI", "RESTful API"],
+    link: "https://sentinelpay.onrender.com/swagger/index.html",
+    github: "https://github.com/Abogeerick/SentinelPay",
+    imagePlaceholder: "/WhatsApp Image 2025-11-27 at 12.56.20.jpeg"
   },
   {
     id: "proj-2",
@@ -107,7 +118,7 @@ export const PROJECTS: Project[] = [
     techStack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "M-Pesa API"],
     link: "https://nexus-app-plum.vercel.app/",
     github: "https://github.com/Abogeerick/nexus-app",
-    imagePlaceholder: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+    imagePlaceholder: "/WhatsApp Image 2025-11-27 at 09.51.55 (2).jpeg"
   },
   {
     id: "proj-3",
@@ -121,6 +132,16 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "proj-4",
+    title: "GMC Kitengela Procurement System",
+    category: "Professional",
+    description: "End-to-end Procurement Module for POS System.",
+    longDescription: "Engineered a complete procurement management system for a custom Point of Sale system. Digitized complex supply chain workflows from Store Requisition → RFQ → Bid Analysis → Purchase Order → GRN → Invoice generation. Features real-time dashboards, supplier management, and automated approval workflows.",
+    techStack: ["React", "Django", "PostgreSQL"],
+    link: "https://dev.pos.gmcplace.co.ke/",
+    imagePlaceholder: "/WhatsApp Image 2025-11-27 at 13.29.33.jpeg"
+  },
+  {
+    id: "proj-5",
     title: "Inventory Management CLI",
     category: "Personal",
     description: "Interactive CLI for managing inventory systems.",

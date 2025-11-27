@@ -140,12 +140,14 @@ const Hero = () => {
             >
               View Work <ChevronRight className="w-4 h-4" />
             </a>
-            <button 
-              onClick={() => window.print()} 
+            <a 
+              href="/Aboge_Erick_Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
               className="px-8 py-4 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 font-bold text-center hover:bg-slate-50 dark:hover:bg-slate-700 transition-all flex items-center justify-center gap-2"
             >
-              <FileDown className="w-4 h-4" /> Download Resume
-            </button>
+              <FileDown className="w-4 h-4" /> View Resume
+            </a>
           </div>
         </div>
 
@@ -273,15 +275,25 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
             </div>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             {project.link && (
               <a 
                 href={project.link} 
                 target="_blank" 
                 rel="noreferrer" 
-                className="flex-1 py-3 flex items-center justify-center gap-2 bg-teal-700 hover:bg-teal-600 text-white rounded-lg font-medium transition-colors"
+                className="flex-1 min-w-[140px] py-3 flex items-center justify-center gap-2 bg-teal-700 hover:bg-teal-600 text-white rounded-lg font-medium transition-colors"
               >
                 <ExternalLink className="w-4 h-4" /> Live Demo
+              </a>
+            )}
+            {project.swaggerLink && (
+              <a 
+                href={project.swaggerLink} 
+                target="_blank" 
+                rel="noreferrer" 
+                className="flex-1 min-w-[140px] py-3 flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-600 text-white rounded-lg font-medium transition-colors"
+              >
+                <Code2 className="w-4 h-4" /> API Docs
               </a>
             )}
             {project.github && (
@@ -289,7 +301,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
                 href={project.github} 
                 target="_blank" 
                 rel="noreferrer" 
-                className="flex-1 py-3 flex items-center justify-center gap-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg font-medium transition-colors"
+                className="flex-1 min-w-[140px] py-3 flex items-center justify-center gap-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg font-medium transition-colors"
               >
                 <Github className="w-4 h-4" /> View Code
               </a>
