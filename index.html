@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Erick Aboge | Senior Full Stack Developer</title>
-    <meta name="description" content="Portfolio of Erick Aboge, a Results-driven Full Stack Developer specializing in React, Node.js, and Python." />
+    <title>Erick Aboge | Full-Cycle Software Engineer</title>
+    <meta name="description" content="Portfolio of Erick Aboge — Full-Cycle Software Engineer. Building software from architecture to production. End-to-end ownership of enterprise systems." />
+    <meta name="keywords" content="Erick Aboge, Full-Cycle Software Engineer, React, Node.js, AWS, Django, TypeScript, Portfolio" />
+    <meta name="author" content="Erick Aboge" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Erick Aboge | Full-Cycle Software Engineer" />
+    <meta property="og:description" content="Building software from architecture to production. End-to-end ownership of enterprise systems." />
+    <meta property="og:type" content="website" />
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,17 +24,68 @@
               teal: {
                 900: '#05595B',
                 800: '#062C30',
+                700: '#0a7c7e',
+                600: '#0d9488',
               },
               amber: {
                 400: '#FFB020',
+                300: '#ffc14d',
               },
               slate: {
-                900: '#1E293B',
+                950: '#0a0f1a',
+                900: '#0f172a',
+                850: '#131c31',
               }
             },
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ['Inter', 'system-ui', 'sans-serif'],
               display: ['Space Grotesk', 'sans-serif'],
+              mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'float-delayed': 'float 6s ease-in-out 2s infinite',
+              'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+              'gradient-shift': 'gradient-shift 8s ease infinite',
+              'slide-up': 'slide-up 0.6s ease-out',
+              'slide-up-delayed': 'slide-up 0.6s ease-out 0.2s both',
+              'fade-in': 'fade-in 0.8s ease-out',
+              'typing': 'typing 3.5s steps(40, end), blink-caret .75s step-end infinite',
+              'scan-line': 'scan-line 4s linear infinite',
+            },
+            keyframes: {
+              'float': {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              'pulse-glow': {
+                '0%, 100%': { opacity: '0.4' },
+                '50%': { opacity: '1' },
+              },
+              'gradient-shift': {
+                '0%, 100%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+              },
+              'slide-up': {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              'typing': {
+                'from': { width: '0' },
+                'to': { width: '100%' },
+              },
+              'blink-caret': {
+                'from, to': { borderColor: 'transparent' },
+                '50%': { borderColor: '#FFB020' },
+              },
+              'scan-line': {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100%)' },
+              },
             }
           }
         }
@@ -37,29 +95,113 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
-        width: 10px;
+        width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #0f172a; 
+        background: #0a0f1a; 
       }
       ::-webkit-scrollbar-thumb {
-        background: #334155; 
-        border-radius: 5px;
+        background: linear-gradient(180deg, #0d9488, #05595B);
+        border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #475569; 
+        background: linear-gradient(180deg, #14b8a6, #0a7c7e);
       }
       
       body {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Inter', system-ui, sans-serif;
       }
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Space Grotesk', sans-serif;
+      }
+      code, pre, .font-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      }
+
+      /* Smooth scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Glass morphism utility */
+      .glass {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .glass-light {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      /* Grid pattern */
+      .grid-pattern {
+        background-image: 
+          linear-gradient(rgba(13, 148, 136, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(13, 148, 136, 0.03) 1px, transparent 1px);
+        background-size: 60px 60px;
+      }
+
+      /* Gradient text */
+      .gradient-text {
+        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 50%, #FFB020 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Line clamp */
+      .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      /* Animate on scroll */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Project card featured glow */
+      .featured-glow {
+        box-shadow: 0 0 60px -12px rgba(13, 148, 136, 0.3);
+      }
+
+      /* Noise overlay */
+      .noise-overlay::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.015;
+        z-index: 100;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
       }
     </style>
   <script type="importmap">
@@ -75,7 +217,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased selection:bg-teal-900 selection:text-white">
+  <body class="bg-slate-950 dark:bg-slate-950 text-slate-100 antialiased selection:bg-teal-900/80 selection:text-white noise-overlay">
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>

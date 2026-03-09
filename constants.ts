@@ -1,33 +1,32 @@
-import { Experience, Project, Skill, Education } from './types';
+import { Experience, Project, Skill, Education, ApproachCard } from './types';
 
 export const SOCIAL_LINKS = {
   email: "abogeerick@gmail.com",
   phone: "+254 790 564 507",
   linkedin: "https://www.linkedin.com/in/erick-aboge-3a09572a6/",
   github: "https://github.com/Abogeerick",
-  portfolio: "https://yourportfolio.com/" // Updated placeholder as user didn't provide a new domain
 };
 
 export const SKILLS: Skill[] = [
   {
+    category: "Backend & APIs",
+    items: ["Node.js", "Express", "Django", "Python", "C# .NET Core", "REST APIs", "PostgreSQL", "MySQL", "Redis"]
+  },
+  {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript", "TailwindCSS", "Redux", "Zustand", "HTML5", "CSS3", "Framer Motion"]
+    items: ["React", "TypeScript", "Next.js", "TailwindCSS", "Zustand", "Framer Motion"]
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express", "Django", "Python", "C# (.NET Core 8.0)", "RESTful APIs", "Swagger"]
+    category: "Infrastructure & DevOps",
+    items: ["Docker", "AWS App Runner", "AWS Amplify", "AWS RDS", "AWS S3", "AWS SES", "GitHub Actions", "CI/CD", "Linux"]
   },
   {
-    category: "Database",
-    items: ["PostgreSQL", "MySQL", "MS SQL Server", "Redis", "Supabase", "EF Core", "Prisma ORM"]
+    category: "AI & Machine Learning",
+    items: ["LangChain", "LLM Integration", "AI Agents", "Transformers.js", "RAG Pipelines"]
   },
   {
-    category: "DevOps & Tools",
-    items: ["Docker", "Coolify", "Vercel", "Render", "Git", "GitHub Actions", "Postman", "Linux"]
-  },
-  {
-    category: "Architecture",
-    items: ["DDD", "Clean Architecture", "RBAC", "JWT Auth", "Microservices"]
+    category: "Architecture & Patterns",
+    items: ["Clean Architecture", "Domain-Driven Design", "RBAC", "Multi-tenancy", "Payment Integration", "Microservices"]
   }
 ];
 
@@ -39,12 +38,12 @@ export const EXPERIENCE: Experience[] = [
     location: "Nairobi, Kenya",
     period: "December 2024 – Present",
     highlights: [
-      "Enterprise CRM Architecture: Engineered a high-performance in-house CRM using Django and React, managing 10,000+ customer records. Implemented indexing and server-side pagination to reduce query time by 40%.",
-      "HRMS Development: Built the Employee Self-Service (ESS) and HR Appraisal modules, replacing legacy systems with a streamlined React/Django solution for PIP and probation workflows.",
-      "Dynamics Integration: Developed C# .NET APIs to extract financial data from Microsoft Dynamics 365 and inject it into executive dashboards for real-time reporting.",
-      "DevOps: Containerized applications using Docker and Coolify to ensure consistent deployment environments."
+      "Architected and deployed enterprise CRM managing 10,000+ customer records with server-side pagination reducing query time by 40%",
+      "Built frontend for HRMS Performance Module in collaboration with 5-person backend team, implementing 8-state approval workflow across departments",
+      "Owned full development lifecycle for ESG Reporting Platform — from architecture through AWS production deployment (Amplify, App Runner, RDS, S3, SES)",
+      "Containerized applications with Docker ensuring consistent environments across development and production"
     ],
-    techStack: ["React", "Django", ".NET", "PostgreSQL", "Docker"]
+    techStack: ["React", "Django", ".NET", "PostgreSQL", "Docker", "AWS"]
   },
   {
     id: "exp-2",
@@ -53,34 +52,35 @@ export const EXPERIENCE: Experience[] = [
     location: "Nairobi, Kenya",
     period: "August 2024 – December 2024",
     highlights: [
-      "Daily Work Diary System: Designed and deployed a compliance monitoring system using Node.js, Express, and React, eliminating manual Friday Excel reports for the entire workforce.",
-      "Feature Implementation: Built Role-Based Access Control (RBAC) for Employee, Supervisor, and HR dashboards, including automated email notifications for non-compliance.",
-      "Fintech Integration: Led the integration of M-Pesa STK Push (Daraja API) for Optiven Water, automating payment reconciliation and reducing manual entry errors by over 90%."
+      "Designed and deployed workforce compliance system end-to-end, replacing manual Excel processes for 150+ employees",
+      "Led M-Pesa payment integration handling real transactions — designed for failure with 90% reduction in reconciliation errors",
+      "Implemented RBAC system with automated email notifications, collaborating with HR stakeholders on requirements",
+      "Owned full development lifecycle from requirements gathering through production deployment"
     ],
-    techStack: ["React", "Node.js", "Express", "MySQL"]
+    techStack: ["React", "Node.js", "Express", "MySQL", "Django"]
   },
   {
     id: "exp-3",
     role: "Software Developer (Contract)",
-    company: "GMC KITENGELA",
+    company: "GMC Kitengela",
     location: "Kajiado, Kenya",
     period: "January 2024 – August 2024",
     highlights: [
-      "POS System Development: Engineered an end-to-end Procurement Module for a custom Point of Sale system using React and Django.",
-      "Workflow Automation: Digitized complex supply chain workflows: Store Requisition → RFQ → Bid Analysis → Purchase Order → GRN → Invoice generation.",
-      "Impact: Streamlined the procurement process, reducing approval turnaround time and improving inventory accuracy."
+      "Engineered end-to-end Procurement Module for a custom Point of Sale system using React and Django",
+      "Digitized complex supply chain workflows: Store Requisition → RFQ → Bid Analysis → Purchase Order → GRN → Invoice",
+      "Streamlined procurement process, reducing approval turnaround time and improving inventory accuracy"
     ],
-    techStack: ["React", "Django"]
+    techStack: ["React", "Django", "PostgreSQL"]
   },
   {
     id: "exp-4",
     role: "Junior Software Developer",
-    company: "FREELANCE (UPWORK)",
+    company: "Freelance (Upwork)",
     location: "Remote",
     period: "November 2022 – January 2024",
     highlights: [
-      "Developed finance gateway apps using .NET for backend.",
-      "Built ecommerce websites and news websites."
+      "Developed finance gateway applications using .NET for backend processing",
+      "Built e-commerce and news websites with React frontends and RESTful APIs"
     ],
     techStack: [".NET", "React"]
   }
@@ -88,67 +88,122 @@ export const EXPERIENCE: Experience[] = [
 
 export const PROJECTS: Project[] = [
   {
-    id: "proj-1",
-    title: "SentinelPay",
-    category: "Professional",
-    description: "Real-Time Fraud Detection & Payments Gateway.",
-    longDescription: "A production-ready full-stack fintech application featuring real-time fraud detection, risk scoring, and a complete payment gateway simulation. Built with Clean Architecture, Domain-Driven Design (DDD), and modern web technologies. Features include JWT-based authentication, multi-currency wallet support, and AI-powered risk explanations.",
-    techStack: ["C# .NET 8", "React", "TypeScript", "PostgreSQL", "Docker", "Redis"],
-    link: "https://sentinel-pay.vercel.app/",
-    github: "https://github.com/Abogeerick/SentinelPay",
-    imagePlaceholder: "/WhatsApp Image 2025-11-27 at 09.48.08 (1).jpeg"
+    id: "proj-esg",
+    title: "Enterprise ESG Platform",
+    subtitle: "ESG Reporting Platform",
+    badge: "End-to-End Ownership • Production",
+    badgeColor: "green",
+    description: "Complete enterprise system for ESG data collection, two-level approval workflows, and PDF reporting.",
+    longDescription: "Complete enterprise system for ESG data collection, two-level approval workflows, and PDF reporting. Owned the full development lifecycle — React frontend, Node.js backend, PostgreSQL database, AWS infrastructure (Amplify, App Runner, RDS, S3, SES). Handles 150+ KPIs with role-based access control.",
+    techStack: ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS", "Docker", "GitHub Actions"],
+    link: "https://main.dwt9oplenis7k.amplifyapp.com",
+    keyPoint: "Full lifecycle: Architecture → Development → Testing → Deployment",
+    featured: true
   },
   {
-    id: "proj-1b",
-    title: "SentinelPay API Documentation",
-    category: "Professional",
-    description: "Comprehensive RESTful API documentation with Swagger UI.",
-    longDescription: "Interactive API documentation for SentinelPay backend built with .NET 8. Features comprehensive endpoint documentation for Authentication, Admin operations, Transactions, and Fraud Detection. Includes JWT-based authorization, request/response schemas, and live API testing capabilities through Swagger UI.",
-    techStack: ["C# .NET 8", "Swagger", "OpenAPI", "RESTful API"],
-    link: "https://sentinelpay.onrender.com/swagger/index.html",
-    github: "https://github.com/Abogeerick/SentinelPay",
-    imagePlaceholder: "/WhatsApp Image 2025-11-27 at 12.56.20.jpeg"
+    id: "proj-minidb",
+    title: "Relational Database From Scratch",
+    subtitle: "MiniDB — Database Engine",
+    badge: "Technical Deep-Dive • CS Fundamentals",
+    badgeColor: "purple",
+    description: "Built a working relational database to understand internals.",
+    longDescription: "Built a working relational database to understand internals. Custom SQL lexer, recursive descent parser, query executor, B-tree indexing for performance. 49 automated tests ensuring correctness. Demonstrates understanding beyond framework abstractions.",
+    techStack: ["Python", "pytest"],
+    link: "https://n5t32y4qnz.eu-west-1.awsapprunner.com",
+    github: "https://github.com/Abogeerick/minidb-complete-project",
+    keyPoint: "Deep CS fundamentals • 49 tests"
   },
   {
-    id: "proj-2",
-    title: "Nexus Financial",
-    category: "Professional",
-    description: "AI-Powered Financial Management Platform.",
-    longDescription: "A comprehensive, production-ready SaaS platform for financial portfolio management with AI-powered transaction categorization, multi-currency support, and real-time analytics. Features include M-PESA transaction management, AI-powered categorization, and multi-asset tracking.",
-    techStack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "M-Pesa API"],
-    link: "https://nexus-app-plum.vercel.app/",
+    id: "proj-dwr",
+    title: "Workforce Compliance System",
+    subtitle: "Daily Work Register System",
+    badge: "Full Stack • Production",
+    badgeColor: "green",
+    description: "Replaced manual Excel-based compliance tracking for entire workforce.",
+    longDescription: "Replaced manual Excel-based compliance tracking for entire workforce. Full stack ownership — React/TypeScript frontend with role-based dashboards (Employee, Supervisor, HR), Node.js backend with automated email notifications for non-compliance.",
+    techStack: ["React", "TypeScript", "Node.js", "Express", "MySQL"],
+    keyPoint: "Full stack ownership • Automated compliance workflows"
+  },
+  {
+    id: "proj-mpesa",
+    title: "Real-Time Payment Gateway",
+    subtitle: "M-Pesa Payment Integration",
+    badge: "Fintech • Production",
+    badgeColor: "amber",
+    description: "Integrated mobile money payments for real estate company processing real transactions.",
+    longDescription: "Integrated mobile money payments for real estate company processing real transactions. Designed for reliability: explicit timeouts, idempotent webhook handling, transaction state machine. Reduced reconciliation errors by 90%.",
+    techStack: ["Django", "M-Pesa Daraja API", "Celery", "PostgreSQL"],
+    keyPoint: "Real money • 90% error reduction • Failure-resilient design"
+  },
+  {
+    id: "proj-nexus",
+    title: "AI-Powered Financial Platform",
+    subtitle: "Nexus Financial",
+    badge: "Full Stack • AI Integration",
+    badgeColor: "blue",
+    description: "Personal finance management with M-Pesa transaction parsing and AI-powered categorization.",
+    longDescription: "Personal finance management with M-Pesa transaction parsing, AI-powered categorization, and interactive analytics. Features smooth Framer Motion animations and dark mode support.",
+    techStack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Framer Motion", "Transformers.js"],
+    link: "https://nexus-app-plum.vercel.app",
     github: "https://github.com/Abogeerick/nexus-app",
-    imagePlaceholder: "/WhatsApp Image 2025-11-27 at 09.51.55 (2).jpeg"
+    keyPoint: "AI categorization • Modern UI/UX"
   },
   {
-    id: "proj-3",
-    title: "Ask the Web",
-    category: "Personal",
-    description: "Streamlit application leveraging LLMs and DuckDuckGo search.",
-    longDescription: "A Streamlit application that answers questions using web search results and provides citations. Features web search using DuckDuckGo, text extraction from web pages, and AI-powered answers.",
-    techStack: ["Python", "Streamlit", "LangChain", "OpenAI", "Docker"],
+    id: "proj-hrms",
+    title: "Performance Appraisal System",
+    subtitle: "HRMS Performance Module",
+    badge: "Enterprise • Team Collaboration",
+    badgeColor: "blue",
+    description: "Built frontend for 8-state approval workflow handling employee performance reviews.",
+    longDescription: "Built frontend for 8-state approval workflow handling employee performance reviews. Collaborated with backend team consuming Django REST APIs. Complex state management for multi-step approval processes across departments.",
+    techStack: ["React", "TypeScript", "Django REST Framework"],
+    keyPoint: "Team collaboration • Complex workflows"
+  },
+  {
+    id: "proj-askweb",
+    title: "LLM-Powered Research Agent",
+    subtitle: "Ask the Web — AI Agent",
+    badge: "AI/ML • Personal Project",
+    badgeColor: "rose",
+    description: "AI agent that searches the web in real-time and synthesizes answers using LangChain and LLMs.",
+    longDescription: "AI agent that searches the web in real-time and synthesizes answers using LangChain and LLMs. Implements RAG (Retrieval-Augmented Generation) pipeline with citation tracking.",
+    techStack: ["Python", "LangChain", "Streamlit", "Groq API"],
     github: "https://github.com/Abogeerick/Ask-the-web",
-    imagePlaceholder: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
+    keyPoint: "AI agents • RAG pipeline"
   },
   {
-    id: "proj-4",
-    title: "GMC Kitengela Procurement System",
-    category: "Professional",
-    description: "End-to-end Procurement Module for POS System.",
-    longDescription: "Engineered a complete procurement management system for a custom Point of Sale system. Digitized complex supply chain workflows from Store Requisition → RFQ → Bid Analysis → Purchase Order → GRN → Invoice generation. Features real-time dashboards, supplier management, and automated approval workflows.",
-    techStack: ["React", "Django", "PostgreSQL"],
-    link: "https://dev.pos.gmcplace.co.ke/",
-    imagePlaceholder: "/WhatsApp Image 2025-11-27 at 13.29.33.jpeg"
+    id: "proj-crm",
+    title: "Customer Relationship Management",
+    subtitle: "CRM System",
+    badge: "Enterprise • Professional",
+    badgeColor: "green",
+    description: "Built backend CRUD operations and frontend pagination for system managing 10,000+ customer records.",
+    longDescription: "Built backend CRUD operations and frontend pagination for system managing 10,000+ customer records. Implemented server-side pagination and database indexing to handle large datasets efficiently.",
+    techStack: ["Django", "React", "PostgreSQL"],
+    keyPoint: "10,000+ records • Performance optimization"
+  }
+];
+
+export const APPROACH_CARDS: ApproachCard[] = [
+  {
+    title: "Full-Cycle Ownership",
+    description: "I see projects from architecture through deployment. Understanding the full lifecycle means I build systems that are deployable, maintainable, and scalable from day one.",
+    icon: "cycle"
   },
   {
-    id: "proj-5",
-    title: "Inventory Management CLI",
-    category: "Personal",
-    description: "Interactive CLI for managing inventory systems.",
-    longDescription: "An interactive Command-Line Interface (CLI) application for managing an inventory system. Supports CRUD operations for products, categories, suppliers, and transactions using SQLite.",
-    techStack: ["Python", "SQLite"],
-    github: "https://github.com/Abogeerick/CLI_project",
-    imagePlaceholder: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&q=80&w=800"
+    title: "Reliability Engineering",
+    description: "Design for failure before writing code. Timeouts, retries, idempotency, state tracking. Production systems must handle the unexpected.",
+    icon: "shield"
+  },
+  {
+    title: "Testing & CI/CD",
+    description: "Automated tests and continuous integration aren't optional. I ship with confidence because the pipeline catches issues before users do.",
+    icon: "check"
+  },
+  {
+    title: "Team & Solo",
+    description: "I thrive both ways — owning projects end-to-end when needed, or collaborating within team structures. The goal is shipping quality software.",
+    icon: "users"
   }
 ];
 

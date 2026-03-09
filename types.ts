@@ -11,14 +11,16 @@ export interface Experience {
 export interface Project {
   id: string;
   title: string;
+  subtitle: string;
   description: string;
   longDescription?: string;
   techStack: string[];
   link?: string;
   github?: string;
-  swaggerLink?: string;
-  category: 'Professional' | 'Freelance' | 'Personal';
-  imagePlaceholder: string;
+  badge: string;
+  badgeColor: 'green' | 'blue' | 'purple' | 'amber' | 'rose';
+  keyPoint: string;
+  featured?: boolean;
 }
 
 export interface Skill {
@@ -31,4 +33,10 @@ export interface Education {
   school: string;
   period: string;
   details?: string;
+}
+
+export interface ApproachCard {
+  title: string;
+  description: string;
+  icon: string;
 }
