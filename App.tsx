@@ -23,7 +23,7 @@ import {
   Zap,
 } from 'lucide-react';
 import { Section } from './components/Section';
-import { EXPERIENCE, PROJECTS, SKILLS, EDUCATION, SOCIAL_LINKS, APPROACH_CARDS } from './constants';
+import { EXPERIENCE, PROJECTS, SKILLS, EDUCATION, SOCIAL_LINKS, APPROACH_CARDS, CV_URL } from './constants';
 import { Project } from './types';
 
 // ─── Hooks ───────────────────────────────────────────────────────────────────
@@ -264,9 +264,9 @@ const Hero: React.FC = () => (
         </h1>
 
         <p className="text-lg text-slate-400 mb-9 max-w-xl leading-relaxed text-pretty">
-          I&rsquo;m Erick Aboge — I build production fintech at Dash.fi: corporate cards, payments, AP
-          automation and AI-powered spend intelligence. I own services end-to-end, from API design and
-          distributed-systems architecture to the Terraform that runs them in production.
+          I&rsquo;m Erick Aboge. I build production fintech at Dash.fi: corporate cards, bill pay,
+          partner integrations and AI-powered spend intelligence. I own services end to end, from API
+          design and distributed-systems architecture to the Terraform that runs them in production.
         </p>
 
         <div className="flex flex-wrap items-center gap-3 mb-12">
@@ -278,12 +278,12 @@ const Hero: React.FC = () => (
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </a>
           <a
-            href="/Aboge_Erick_Resume.pdf"
+            href={CV_URL}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg border border-white/12 text-white font-semibold hover:bg-white/5 hover:border-white/25 transition-all"
           >
-            <FileDown className="w-4 h-4" /> Résumé
+            <FileDown className="w-4 h-4" /> Download CV
           </a>
           <div className="flex items-center gap-1 ml-1">
             <a href={SOCIAL_LINKS.github} target="_blank" rel="noreferrer" className="p-3 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all" aria-label="GitHub">
@@ -322,8 +322,8 @@ const Hero: React.FC = () => (
             <div className="pl-5">
               <div><span className="text-teal-300">company</span><span className="text-slate-500">:</span> <span className="text-emerald-300">'Dash.fi · Umba Group'</span><span className="text-slate-500">,</span></div>
               <div className="mt-0.5"><span className="text-teal-300">focus</span><span className="text-slate-500">:</span> <span className="text-slate-400">[</span></div>
-              <div className="pl-5 text-emerald-300">'corporate cards'<span className="text-slate-500">,</span> 'payments'<span className="text-slate-500">,</span></div>
-              <div className="pl-5 text-emerald-300">'AP automation'<span className="text-slate-500">,</span> 'AI spend'</div>
+              <div className="pl-5 text-emerald-300">'corporate cards'<span className="text-slate-500">,</span> 'bill pay'<span className="text-slate-500">,</span></div>
+              <div className="pl-5 text-emerald-300">'integrations'<span className="text-slate-500">,</span> 'AI spend'</div>
               <div><span className="text-slate-400">]</span><span className="text-slate-500">,</span></div>
               <div className="mt-0.5"><span className="text-teal-300">owns</span><span className="text-slate-500">:</span> <span className="text-emerald-300">'api → infra → prod'</span><span className="text-slate-500">,</span></div>
               <div className="mt-0.5"><span className="text-teal-300">stack</span><span className="text-slate-500">:</span> <span className="text-emerald-300">'TS · Go · Python · AWS'</span><span className="text-slate-500">,</span></div>
@@ -353,7 +353,7 @@ const StatsRow: React.FC = () => {
     { value: '4+', label: 'Years in production', icon: <Cpu className="w-4 h-4" /> },
     { value: '13', label: 'Detector anomaly engine', icon: <Zap className="w-4 h-4" /> },
     { value: '90%', label: 'Fewer reconciliation errors', icon: <ShieldCheck className="w-4 h-4" /> },
-    { value: '100%', label: 'Services owned as Terraform IaC', icon: <Cloud className="w-4 h-4" /> },
+    { value: '15+', label: 'Client projects, 5-star rated', icon: <Boxes className="w-4 h-4" /> },
   ];
   return (
     <div ref={ref} className="relative z-20 px-6 md:px-12 -mt-6">
@@ -503,7 +503,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
             </div>
           )}
           {!project.link && !project.github && (
-            <p className="text-xs text-slate-600 italic">Proprietary — built for production at Dash.fi.</p>
+            <p className="text-xs text-slate-600 italic">Proprietary codebase, so there&rsquo;s no public link. Happy to walk through the design.</p>
           )}
         </div>
       </div>
@@ -562,7 +562,7 @@ export default function App() {
             id="projects"
             eyebrow="Selected work"
             title="Production systems, and the ideas behind them."
-            subtitle="Fintech infrastructure I lead or own at Dash.fi, plus engineering projects that show how I think. Tap any card for detail."
+            subtitle="Fintech systems I lead or own at Dash.fi, the SaaS platform I co-founded, and projects that show how I think. Tap any card for detail."
           >
             <div className="grid md:grid-cols-2 gap-5">
               {PROJECTS.map((project, i) => (
@@ -723,8 +723,8 @@ export default function App() {
                   </h3>
                   <p className="text-slate-400 mt-5 mb-8 leading-relaxed max-w-lg text-pretty">
                     Open to senior roles in payments and distributed systems, and to interesting
-                    collaborations. Based in Nairobi, working remotely with a US team — I&rsquo;m comfortable
-                    across time zones.
+                    collaborations. Based in Nairobi and working remotely with a US team, so I&rsquo;m
+                    comfortable across time zones.
                   </p>
                   <div className="flex flex-wrap items-center gap-3">
                     <a href={`mailto:${SOCIAL_LINKS.email}`} className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-white text-slate-950 font-semibold hover:bg-teal-300 transition-colors">

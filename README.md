@@ -1,10 +1,11 @@
 <div align="center">
 
-# 🚀 Erick Aboge — Senior Software Engineer · Fintech
+# Erick Aboge · Senior Software Engineer, Fintech
 
-**Corporate cards, payments, AP automation & AI-powered spend intelligence.**
+**Corporate cards, bill pay, partner integrations and AI-powered spend intelligence.**
 
-[![Live Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-Visit-0d9488?style=for-the-badge)](https://your-portfolio-url.com)
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-Visit-0d9488?style=for-the-badge)](https://erick-aboge-portfolio.vercel.app)
+[![CV](https://img.shields.io/badge/CV-PDF-334155?style=for-the-badge)](https://erick-aboge-portfolio.vercel.app/Erick_Aboge_CV.pdf)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/erick-aboge-3a09572a6/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/Abogeerick)
 
@@ -12,145 +13,58 @@
 
 ---
 
-## 📋 About
+## About
 
-A professional portfolio website showcasing my work as a **Senior Software Engineer** building production fintech systems. At **Dash.fi (Umba Group)** I own services end-to-end across payments, corporate spend and AI-powered financial products — backend, APIs, cloud infrastructure, deployment and production debugging.
+My personal portfolio. I'm a Senior Software Engineer at **Dash.fi** (via Umba), where I own services end to end across corporate cards, bill pay and AI spend intelligence: backend, APIs, cloud infrastructure, deployment and production debugging. Before that I co-founded **Carbon Corp Solutions**, a multi-tenant ESG SaaS, and built payments and internal platforms at Optiven.
 
-### Key Highlights
-- 💳 **Fintech Core** — Corporate cards, transactions, spending controls, AP automation / bill pay, and accounting integrations (QuickBooks/NetSuite via Rutter)
-- 🤖 **AI Spend Intelligence** — Lead engineer on a spend agent with a 13-detector anomaly engine, invoice-level reconciliation, and budget-breach alerting (Inngest + Knock)
-- 🧱 **Distributed Systems** — Multi-tenant isolation, event-driven workflows, idempotency, and resilient vendor integrations (Plaid, Middesk, Heron, Stytch)
-- ☁️ **Infrastructure as Code** — AWS (Lambda, SQS, S3, SES, IAM) owned via Terraform, with CI/CD and gated production deploys
-- 💰 **Payments Track Record** — Real-money M-Pesa integration with idempotent webhooks and a 90% reduction in reconciliation errors
+## Featured work
 
----
+| Project | What it is | Stack |
+|---|---|---|
+| AI Spend Agent (Dash.fi, lead) | Provider cost ingestion, invoice-level reconciliation, a 13-detector anomaly engine, budget-breach alerting and PDF audit reports | TypeScript, PostgreSQL, Inngest, Knock, AWS Lambda |
+| Affiliate Conversion Tracking (Dash.fi, eng lead) | Server-side impact.com conversions for marketplace referrals, idempotent sends and a daily reconcile | TypeScript, Fastify, Inngest, AWS SNS, SvelteKit |
+| Bill Pay (Dash.fi) | Inbound email and mailbox invoice ingestion with content-hash dedup; owner of ERP and vendor sync | TypeScript, AWS SES/SQS, PostgreSQL, Terraform |
+| Multi-Tenant ESG Platform (Carbon Corp, co-founder) | ESG data collection, two-level approvals and board reporting across 150+ KPIs. [Live](https://main.dwt9oplenis7k.amplifyapp.com) | React, Node.js, PostgreSQL, AWS, Docker |
+| Multi-Tenant Isolation in PostgreSQL | Row-Level Security on 41 tables plus a dual-pool AsyncLocalStorage connection strategy | TypeScript, PostgreSQL |
+| M-Pesa Express MCP Server | Live M-Pesa Daraja payments exposed to LLM clients through tool use | Python, FastMCP, Google Cloud Run |
+| Real-Time Payment Gateway (Optiven) | Production M-Pesa integration, 90% fewer reconciliation errors | Django, Celery, PostgreSQL |
+| MiniDB | Relational database from scratch, 49 tests. [Live](https://n5t32y4qnz.eu-west-1.awsapprunner.com) · [Code](https://github.com/Abogeerick/minidb-complete-project) | Python, pytest |
+| Nexus Financial | M-Pesa statement parsing with AI categorisation. [Live](https://nexus-app-plum.vercel.app) · [Code](https://github.com/Abogeerick/nexus-app) | Next.js, Prisma, Transformers.js |
+| Ask the Web | RAG research agent with cited answers. [Code](https://github.com/Abogeerick/Ask-the-web) | Python, LangChain, Groq |
 
-## 🛠️ Tech Stack (Portfolio)
+## Run locally
 
-| Category | Technologies |
-|----------|-------------|
-| **Framework** | React 19, TypeScript |
-| **Build Tool** | Vite 6 |
-| **Styling** | TailwindCSS (CDN), Custom CSS |
-| **Fonts** | Inter, Space Grotesk, JetBrains Mono |
-| **Icons** | Lucide React |
-| **Animations** | CSS keyframe animations, Intersection Observer API |
-
----
-
-## 🚀 Featured Projects
-
-### 1. AI Spend Agent — Dash.fi (Lead Engineer)
-> Spend-intelligence product line: provider usage/cost ingestion, invoice-level billing reconciliation, and a 13-detector anomaly engine. Budget-breach alerting on Inngest with Knock/SendGrid and once-per-period delivery guarantees, plus server-side PDF audit reports.
-
-**Tech:** TypeScript, Node.js, PostgreSQL, Inngest, Knock, AWS Lambda
-
-### 2. True Multi-Tenant Isolation in PostgreSQL — Dash.fi
-> A Dual-Pool connection strategy backed by AsyncLocalStorage that enforces tenant data sovereignty at the connection layer — moving beyond `WHERE tenant_id = ?`. Written up as a full architecture deep-dive.
-
-**Tech:** TypeScript, Node.js, PostgreSQL, AsyncLocalStorage
-
-### 3. Bill Pay Invoice Ingestion — Dash.fi
-> AP-automation infrastructure: SES-forwarded inbound email and webhook-driven mailbox sync that classify billing emails by sender and route documents with content-hash deduplication. Vendor integrations (Plaid, Middesk, Heron) guarded so degradation never breaks a customer request.
-
-**Tech:** TypeScript, AWS SES, AWS SQS, PostgreSQL, Terraform
-
-### 4. Enterprise ESG Platform
-> End-to-end ownership of a complete enterprise system for ESG data collection, approval workflows, and PDF reporting. Deployed on AWS infrastructure.
-
-**Tech:** React, TypeScript, Node.js, PostgreSQL, AWS, Docker, GitHub Actions  
-**Live:** [main.dwt9oplenis7k.amplifyapp.com](https://main.dwt9oplenis7k.amplifyapp.com)
-
-### 5. MiniDB — Relational Database From Scratch
-> Built a working relational database engine with custom SQL lexer, recursive descent parser, and B-tree indexing. 49 automated tests.
-
-**Tech:** Python, pytest  
-**Live:** [AWS App Runner](https://n5t32y4qnz.eu-west-1.awsapprunner.com) • **Code:** [GitHub](https://github.com/Abogeerick/minidb-complete-project)
-
-### 6. Real-Time M-Pesa Payment Gateway
-> Mobile money payment integration for real estate company. Designed for reliability with idempotent webhooks and a 90% reduction in reconciliation errors.
-
-**Tech:** Django, M-Pesa Daraja API, Celery, PostgreSQL
-
-### 7. Nexus Financial — AI-Powered Finance Platform
-> Personal finance management with M-Pesa transaction parsing, AI-powered categorization, and interactive analytics.
-
-**Tech:** Next.js, TypeScript, Prisma, PostgreSQL, Transformers.js  
-**Live:** [nexus-app-plum.vercel.app](https://nexus-app-plum.vercel.app) • **Code:** [GitHub](https://github.com/Abogeerick/nexus-app)
-
-### 8. Ask the Web — LLM-Powered Research Agent
-> AI agent implementing a RAG pipeline with real-time web search and citation tracking.
-
-**Tech:** Python, LangChain, Streamlit, Groq API  
-**Code:** [GitHub](https://github.com/Abogeerick/Ask-the-web)
-
----
-
-## 🏃 Run Locally
-
-**Prerequisites:** Node.js 18+
+Requires Node.js 18+.
 
 ```bash
-# Clone the repository
 git clone https://github.com/Abogeerick/erick-aboge-portfolio.git
 cd erick-aboge-portfolio
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
-The app will be available at `http://localhost:3000`
+Runs at `http://localhost:3000`. Pushes to `main` deploy to Vercel.
 
----
-
-## 📁 Project Structure
+## Structure
 
 ```
 erick-aboge-portfolio/
-├── App.tsx              # Main application component
-├── constants.ts         # Project data, experience, skills
-├── types.ts             # TypeScript interfaces
-├── index.html           # HTML entry with Tailwind config & animations
-├── index.tsx            # React entry point
-├── vite.config.ts       # Vite configuration
+├── App.tsx            # page sections and components
+├── constants.ts       # all content: experience, projects, skills, education
+├── types.ts           # content types
+├── index.html         # Tailwind config, fonts, animations, meta tags
 ├── components/
-│   ├── Section.tsx      # Reusable section layout component
-│   ├── MetricCard.tsx   # Stats/metric display card
-│   └── ThemeToggle.tsx  # Dark/light mode toggle
-└── public/
-    └── Aboge_Erick_Resume.pdf
+│   └── Section.tsx    # shared section layout
+├── public/
+│   └── Erick_Aboge_CV.pdf
+└── vercel.json        # redirects the old résumé URL to the current CV
 ```
 
----
+To update content, edit `constants.ts`. To replace the CV, overwrite `public/Erick_Aboge_CV.pdf`.
 
-## ✨ Design Features
+## Contact
 
-- **Dark-first design** with glassmorphism and subtle noise overlay
-- **Scroll-reveal animations** using Intersection Observer
-- **Animated counters** for statistics
-- **Particle field background** with floating elements
-- **Interactive code terminal** in hero section
-- **Color-coded project badges** (Production/Green, AI/Rose, CS/Purple, etc.)
-- **Responsive** — optimized for mobile, tablet, and desktop
-- **Custom scrollbar** with gradient styling
-- **Grid pattern background** for depth
-
----
-
-## 📬 Contact
-
-- **Email:** abogeerick@gmail.com
-- **Phone:** +254 790 564 507
-- **LinkedIn:** [Erick Aboge](https://www.linkedin.com/in/erick-aboge-3a09572a6/)
-- **GitHub:** [Abogeerick](https://github.com/Abogeerick)
-
----
-
-<div align="center">
-
-**Building production fintech systems — cards, payments, AP automation & AI spend intelligence.**
-
-</div>
+- Email: abogeerick@gmail.com
+- Phone: +254 790 564 507
+- LinkedIn: [Erick Aboge](https://www.linkedin.com/in/erick-aboge-3a09572a6/)
+- GitHub: [Abogeerick](https://github.com/Abogeerick)
